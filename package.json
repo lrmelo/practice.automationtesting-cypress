@@ -1,0 +1,23 @@
+{
+  "name": "practice.automationtesting-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrmelo/practice.automationtesting-cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lrmelo/practice.automationtesting-cypress/issues"
+  },
+  "homepage": "https://github.com/lrmelo/practice.automationtesting-cypress#readme",
+  "devDependencies": {
+    "cypress": "^9.7.0"
+  }
+}
