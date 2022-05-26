@@ -4,7 +4,7 @@ export class BasePage {
   }
 
   static fillValueInInput(element, value) {
-      return cy.get(element).clear().type(value);
+      return cy.get(element).clear({force: true}).type(`${value}{enter}`);
   }
 
   static getVisibleElement(element) {
