@@ -9,6 +9,10 @@ export class SearchPage extends BasePage {
     }
 
     static checkProductIsVisible(text) {
-        BasePage.checkElementContainsText('.post-content-inner', text)
+        BasePage.checkElementContainsText('#content', text)
+    }
+
+    static checkNotFoundMessage() {
+        BasePage.checkElementContainsText('#content', 'Sorry, nothing found.');
     }
 }
