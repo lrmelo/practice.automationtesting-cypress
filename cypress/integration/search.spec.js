@@ -1,6 +1,8 @@
 import { SearchPage } from '../support/pages/searchPage';
 import { ListProductPage } from '../support/pages/listProductPage';
 import { RegisterPage } from '../support/pages/registerPage';
+import { RegisterDataFactory } from '../factory/register-data';
+const dataFactory = new RegisterDataFactory();
 describe('test', () => {
     beforeEach(()=> {
         cy.viewport(1000, 720)
@@ -26,13 +28,15 @@ describe('test', () => {
     })
 
     it('Deve efetuar um cadastro com sucesso', ()=> {
+        const data = dataFactory.dataFactory();
         SearchPage.clickInMenuBar();
         RegisterPage.clickInRegisterMenu();
-        RegisterPage.fillRegisterEmailInput();
-        RegisterPage.fillRegisterPswInput();
+        RegisterPage.fillRegisterEmailInput(data.email);
+        RegisterPage.fillRegisterPswInput(data.password);
         RegisterPage.clickInRegisterBtn();
         RegisterPage.clickInAccountDetails();
-        RegisterPage.fillFirstNameInput();
-        RegisterPage.fillLastNameInput();
+        RegisterPage.fillFirstNameInput(data.firstName);
+        RegisterPage.fillLastNameInput(data.lastName);
+        RegisterPage.clickInSaveBtn();
     })
 })

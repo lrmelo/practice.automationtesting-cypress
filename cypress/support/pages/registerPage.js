@@ -2,7 +2,7 @@ import { BasePage } from "./basePage";
 
 export class RegisterPage extends BasePage {
     static clickInRegisterMenu() {
-        BasePage.clickInElement('#menu-item-50"');
+        BasePage.clickInElement('#menu-item-50');
     }
 
     static clickInRegisterBtn() {

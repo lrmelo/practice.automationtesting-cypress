@@ -5,7 +5,7 @@ export class SearchPage extends BasePage {
         BasePage.clickInElement('#menu-icon');
     }
     static fillSearchInput(value) {
-        BasePage.fillValueInInput('#s', value);
+        BasePage.fillValueInInputEnter('#s', value);
     }
 
     static checkProductIsVisible(text) {

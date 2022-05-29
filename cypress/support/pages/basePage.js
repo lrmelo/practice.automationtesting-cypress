@@ -12,6 +12,10 @@ export class BasePage {
   }
 
   static fillValueInInput(element, value) {
+    return cy.get(element).clear({force: true}).type(`${value}`);
+}
+
+  static fillValueInInputEnter(element, value) {
       return cy.get(element).clear({force: true}).type(`${value}{enter}`);
   }
 
