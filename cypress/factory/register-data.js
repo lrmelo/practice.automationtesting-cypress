@@ -1,7 +1,7 @@
 const { faker } = require('@faker-js/faker');
 
 export class RegisterDataFactory {
-    dataFactory() {
+    generate() {
         const name = faker.name.firstName();
         const data = {
             firstName: name,

@@ -3,11 +3,12 @@ import { ListProductPage } from '../support/pages/listProductPage';
 import { RegisterPage } from '../support/pages/registerPage';
 import { RegisterDataFactory } from '../factory/register-data';
 const dataFactory = new RegisterDataFactory();
-describe('test', () => {
+describe('Automation Practice Site', () => {
     beforeEach(()=> {
         cy.viewport(1000, 720)
         cy.visit('http://practice.automationtesting.in/')
     })
+    
     it('Deve exibir o produto correto ao pesquisar por Android', ()=>{
         SearchPage.clickInMenuBar();
         SearchPage.fillSearchInput('Android');
@@ -28,7 +29,7 @@ describe('test', () => {
     })
 
     it('Deve efetuar um cadastro com sucesso', ()=> {
-        const data = dataFactory.dataFactory();
+        const data = dataFactory.generate();
         SearchPage.clickInMenuBar();
         RegisterPage.clickInRegisterMenu();
         RegisterPage.fillRegisterEmailInput(data.email);
